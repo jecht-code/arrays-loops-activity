@@ -125,8 +125,6 @@ while (0 === zeroArray[zeroArray.length-1]) {
      console.log(zeroArray);
 }
 
-
-
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
@@ -141,8 +139,27 @@ while (0 === zeroArray[zeroArray.length-1]) {
       and lowest numbers.
  * 3. Log the highest and lowest number to the console
  */
+let largishArray = [2, 2, -3, 7, 4, 1, 7, 12, 8];
+let high = -Infinity;
+let low = Infinity;
 
+console.log(largishArray.length);
+console.log(largishArray);
 
+for (i of largishArray) {
+     //console.log(i);
+     if (i > high) {
+          high = i;
+          //largishArray.length++;
+          console.log(high);
+     } else if (i < low) {
+          low = i;
+          console.log(low);
+     }
+}
+console.log('HIGH:', high);
+console.log({high, low});
+console.log('LOW:', low);
 // Example output
 // 2, 2, -3, 7, 4, 1, 7, 12, 8
 // High: 12
